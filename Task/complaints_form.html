@@ -16,35 +16,39 @@
             </B><br>Help us improve our service
             <hr bgcolor="black" color="black" size="6">
         </caption>
-        <form action="">
+        <form action="" method="post">
             <tr>
                 <td>
                     <b>Full name </b>
                     <font color="red">*</font>
                 </td>
-                <td><input type="text" size="15px" required><br>First </td>
-                <td><input type="text" size="15px" required><br>Last</td>
+                <td><input type="text" name="name" size="15px" required pattern="[A-Za-z\s]+" maxlength="20"><br>First
+                </td>
+                <td><input type="text" name="name" size="15px" required pattern="[A-Za-z\s]+" maxlength="20"><br>Last
+                </td>
             </tr>
             <tr>
                 <td>
                     <b> Email</b>
                     <font color="red">*</font>
                 </td>
-                <td colspan="2"><input type="email" name="" id="" size="25px" required></td>
+                <td colspan="2"><input type="email" name="email" size="25px" required maxlength="50"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
 
             </tr>
             <tr>
                 <td>
                     <b>Phone</b>
                 </td>
-                <td colspan="2"><input type="tel" name="" id="" size="25px" required></td>
+                <td colspan="2"><input type="tel" name="mobile" size="25px" required maxlength="10"
+                        pattern="[6789][0-9]{9}"></td>
             </tr>
             <tr>
                 <td>
                     <b> Where did we go wrong?</b>
                     <font color="red">*</font>
                 </td>
-                <td colspan="2"><textarea name="" rows="6" cols="35"></textarea></td>
+                <td colspan="2"><textarea name="" rows="6" cols="35" required></textarea></td>
             </tr>
             <tr>
                 <td align="center" colspan="3">

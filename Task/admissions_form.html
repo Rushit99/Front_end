@@ -15,18 +15,18 @@
             </B><br>Enter your admission information below
             <hr bgcolor="black" color="black" size="2">
         </caption>
-        <form action="">
+        <form action="" method="post">
             <tr>
                 <td> <b> Name </b>
                     <font color="red">*</font>
                 </td>
             </tr>
             <tr>
-                <td><input type="text" required>
+                <td><input type="text" name="name" required pattern="[A-Za-z\s]+" maxlength="20">
                 </td>
-                <td><input type="text" required>
+                <td><input type="text" name="name" required pattern="[A-Za-z\s]+" maxlength="20">
                 </td>
-                <td><input type="text" required>
+                <td><input type="text" name="name" required pattern="[A-Za-z\s]+" maxlength="20">
                 </td>
             </tr>
             <tr>
@@ -48,7 +48,7 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="date">
+                <td><input type="date" required>
                 </td>
             </tr>
             <tr>
@@ -57,15 +57,15 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="a"> Male
+                <td><input type="radio" name="a" required> Male
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="a"> Female
+                <td><input type="radio" name="a" required> Female
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="a"> Decline to answer
+                <td><input type="radio" name="a" required> Decline to answer
                 </td>
             </tr>
             <tr>
@@ -74,15 +74,15 @@
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="a"> No
+                <td><input type="radio" name="a" required> No
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="a"> Yes
+                <td><input type="radio" name="a" required> Yes
                 </td>
             </tr>
             <tr>
-                <td><input type="radio" name="a"> Decline to answer
+                <td><input type="radio" name="a" required> Decline to answer
                 </td>
             </tr>
         </form>
