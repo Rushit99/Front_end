@@ -8,52 +8,48 @@
 </head>
 <style>
     .main {
-        height: 300px;
-        width: 500px;
-        margin: 100px auto;
-        border: 1px solid gray;
-        transition: 0.3s;
+        height: 200px;
+        width: 300px;
+        margin: 210px auto;
+        background-image: url(https://images.unsplash.com/photo-1464219789935-c2d9d9aba644?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 3px solid gray;
+        overflow: hidden;
     }
 
-    .main:hover {
+    .main1 {
+        height: 200px;
+        width: 300px;
         background-color: rgba(0, 0, 0, 0.1);
+        transition: 0.6s;
+        transform: translate(-100%, 100%);
 
+    }
+
+    .main2 {
+        height: 200px;
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: 0.6s;
+        transform: translate(100%, -200%);
+    }
+
+    .main:hover .main1 {
+        transform: translate(0%, 0%);
+    }
+
+    .main:hover .main2 {
+        transform: translate(0%, -100%);
     }
 </style>
 
 <body>
-    <div class="main"></div>
-</body>
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .main {
-            background-color: aqua;
-            padding: 30px;
-            /* by defualt */
-            /* 0-1 */
-            opacity: 0.2;
-        }
-    </style>
-</head>
-
-<body>
     <div class="main">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, autem aliquam. Illum unde ipsum quam expedita
-        laboriosam officia ratione necessitatibus facere natus reiciendis culpa exercitationem, ipsa veritatis sit
-        distinctio sint?
-    </div>
-    <div class="main2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, quibusdam neque. Magnam corrupti ullam
-        fugiat aut ex totam quo harum? Soluta voluptas consectetur voluptatem consequuntur inventore ad praesentium
-        ullam accusamus.
+        <div class="main1">
+        </div>
+        <div class="main2">
+        </div>
     </div>
 </body>
 
