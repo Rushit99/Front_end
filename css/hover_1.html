@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main {
+        height: 30px;
+        width: 90px;
+        margin: 100px auto;
+        background-color: aqua;
+        transition: 0.6s;
+        text-align: center;
+        color: white;
+        /* overflow: hidden; */
+    }
+
+    .main1 {
+        height: 25px;
+        width: 85px;
+        margin: 0 auto;
+        border: 3px solid aqua;
+        transition: 0.6s;
+        opacity: 0;
+        transform: translate(0%, -60%);
+
+    }
+
+    .main:hover .main1 {
+        transform: translate(0%, -60%) scale(1.15, 1.5);
+        opacity: 1;
+
+    }
+</style>
+
+<body>
+    <div class="main">
+        Shop Now
+        <div class="main1">
+        </div>
+    </div>
+
+</body>
+
+</html>

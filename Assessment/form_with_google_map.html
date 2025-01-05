@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link rel="stylesheet" href="/Assessment/form_with_google_map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <form action="">
+        <div class="container">
+            <h2>CONTACT US</h2>
+            <hr>
+            <div class="top">
+                <div class="left">
+                    <p class="p">ADDRESS : </p>
+                    <div class="left1">
+                        <p> Saint Marco Street, 6th Floor, Tokyo, Japan, 123456.
+                        </p>
+                    </div>
+                    <div class="left2">
+                        <i class="fa-solid fa-square-phone"></i> <span> +91 9574571014 </span> <br>
+                        <i class="fa-solid fa-envelope"></i> <span> example@gmail.com </span>
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-left">
+                    <input type="text" required pattern="[A-Za-z\s]+" minlength="3" maxlength="6" placeholder="Name :">
+                    <input type="text" required pattern="^[a-zA-Z0-9 &.,'-]{2,50}$" minlength="3" maxlength="30"
+                        placeholder="Company :">
+                    <input type="email" required maxlength="50" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        placeholder="Email :">
+                    <input type="tel" required maxlength="10" pattern="[6789][0-9]{9}" placeholder="Mobile :">
+                    <textarea name="" id="" placeholder="Message :" rows="6" cols="36" required></textarea>
+                    <button>Send</button>
+                </div>
+                <div class="bottom-right">
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42754.220541066534!2d72.65299820586407!3d23.045981243932964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e871501dc64f5%3A0x830b31c6257bf4a7!2sTOPS%20Technologies%20Nikol!5e0!3m2!1sen!2sin!4v1734594431138!5m2!1sen!2sin"
+                            width="220" height="220" style="border: 1px solid #d2d1d1;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-brands fa-square-facebook"></i><i class="fa-brands fa-square-twitter"></i><i
+                            class="fa-brands fa-linkedin"></i><i class="fa-brands fa-square-github"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+</html>
