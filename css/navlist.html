@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navlist .list {
+            display: inline-block;
+            background-color: lightblue;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .nav {
+            list-style: none;
+            position: absolute;
+            background-color: rgb(216, 249, 149);
+            top: 100%;
+            left: 0;
+            padding: 0;
+            display: none;
+        }
+
+        .nav li {
+            padding: 5px 10px;
+            border: 2px solid rgb(164, 190, 113);
+        }
+
+        .list:hover .nav {
+            display: block;
+        }
+
+        .nest {
+            list-style: none;
+            position: absolute;
+            background-color: rgb(148, 255, 198);
+            top: 50%;
+            left: 100%;
+            padding: 0;
+            display: none;
+        }
+
+        .h3 li {
+
+            border: 2px solid rgb(99, 190, 142);
+        }
+
+        .h3:hover .nest {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="navlist">
+        <li class="list">Home
+            <ul class="nav">
+                <li>Home 1</li>
+                <li>Home 2</li>
+                <li class="h3">Home 3
+                    <ul class="nest">
+                        <li>nest1</li>
+                        <li>nest2</li>
+                        <li>nest3</li>
+                        <li>nest4</li>
+                    </ul>
+                </li>
+                <li>Home 4</li>
+            </ul>
+        </li>
+        <li class="list">Product
+        </li>
+        <li class="list">Services</li>
+        <li class="list">Help</li>
+    </ul>
+</body>
+
+</html>

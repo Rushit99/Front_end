@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 100px auto;
+        width: 300px;
+    }
+
+    .container {
+        width: 100%;
+        border: 1px solid;
+        position: relative;
+
+    }
+
+    .view {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        opacity: 0;
+    }
+
+    .new {
+        position: absolute;
+        right: 0;
+        padding: 5px 10px;
+        z-index: 99;
+        background-color: #ef6666;
+        color: white;
+        display: block;
+    }
+
+    .img {
+        width: 100%;
+        margin: 0 auto;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="new">New</div>
+            <div class="view">
+                Quick View
+
+            </div>
+            <div class="img">
+                <img src="https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/m2.jpg"
+                    alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
