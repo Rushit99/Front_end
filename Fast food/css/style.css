@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* utilites */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#Header {
+  background: url(/image/header.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 30px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.navbar .logo {
+  width: 70px;
+}
+.navbar .bars {
+  color: white;
+  font-size: 25px;
+  display: block;
+}
+.navlist {
+  list-style: none;
+  display: none;
+}
+
+.navlist .list {
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.navlist .list .nava {
+  text-decoration: none;
+  font-size: clamp(16px, 3vw, 25px);
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+.header-main {
+  color: #ffffff;
+  text-align: right;
+  padding: 40px 0;
+}
+.header-main .h1-header {
+  font-size: clamp(20px, 9.5vw, 125px);
+  font-weight: 700;
+  font-family: "Aleo";
+}
+
+.header-main .p-header {
+  width: 50%;
+  margin: 30px 0 30px 50%;
+  font-size: clamp(16px, 3.5vw, 30px);
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+
+.header-main .btn-header {
+  border-radius: 33px;
+  background-color: #ffffff;
+  font-size: clamp(16px, 3.5vw, 23px);
+  text-transform: uppercase;
+  color: #ff6f5e;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  padding: 10px 20px;
+}
+
+#sec1 {
+  background-color: #ffe2c6;
+  padding-top: 40px;
+}
+
+.team-content {
+  color: #ff6f5e;
+  text-align: center;
+}
+
+.our-h2 {
+  font-size: clamp(20px, 8.5vw, 64px);
+  font-weight: 700;
+  font-family: "Aleo";
+}
+
+.our-p {
+  font-size: clamp(16px, 3.5vw, 25px);
+  font-weight: 400;
+  font-family: "Montserrat";
+  width: 90%;
+  margin: 20px auto;
+}
+
+.team .row {
+  display: block;
+}
+
+.team .row .col {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.card .card-img {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.card-content {
+  font-family: "Montserrat";
+  color: #ff6f5e;
+}
+
+.card-content .card-h4 {
+  font-size: clamp(16px, 3.5vw, 28px);
+  font-weight: 700;
+}
+
+.card-content .card-p {
+  font-size: clamp(16px, 3.5vw, 17px);
+  font-weight: 400;
+  margin: 10px auto;
+}
+
+#sec2 {
+  background-color: #fff2e5;
+}
+
+#sec2 .curv {
+  position: relative;
+}
+#sec2 .curv .burger-icon img {
+  position: absolute;
+}
+.burger-icon .icon1 {
+  bottom: 35%;
+  left: 33%;
+  width: 15vw;
+}
+.burger-icon .icon2 {
+  bottom: 20%;
+  left: 80%;
+  width: 8vw;
+}
+.burger-icon .icon3 {
+  top: 40%;
+  left: 25%;
+  width: 15vw;
+}
+.burger-icon .icon4 {
+  top: 45%;
+  left: 57%;
+  width: 5vw;
+}
+.burger-icon .icon5 {
+  bottom: 35%;
+  left: 75%;
+  width: 16vw;
+}
+.burger .row {
+  display: block;
+}
+.burger .row .col-40 {
+  width: 100%;
+}
+.col-40 .burger-img {
+  width: 200px;
+  margin: 0 auto;
+}
+.burger .row .col-60 {
+  width: 100%;
+  text-align: center;
+}
+.burger-content .sec2-p {
+  width: 90%;
+  font-size: clamp(16px, 3.5vw, 30px);
+  font-weight: 400;
+  font-family: "Montserrat";
+  margin: 10px auto;
+}
+.burger-content {
+  color: #ff6f5e;
+  padding: 30px;
+}
+.burger-content .sec2-h2 {
+  font-size: clamp(20px, 7vw, 75px);
+  font-weight: 700;
+  font-family: "Aleo";
+}
+.burger-content .btn-burger {
+  font-size: clamp(16px, 3.5vw, 25px);
+  text-transform: uppercase;
+  color: #ffe2c6;
+  font-weight: 700;
+  font-family: "Montserrat";
+  text-align: center;
+  border-radius: 32px;
+  background-color: #ff6f5e;
+  border: none;
+  padding: 10px 20px;
+}
+/*  */
+#sec3 {
+  background-color: #ffe2c6;
+  padding-top: 40px;
+}
+
+.stat {
+  color: #ff6f5e;
+  text-align: center;
+}
+
+.stat-h6 {
+  font-size: clamp(20px, 8.5vw, 64px);
+  font-weight: 700;
+  font-family: "Aleo";
+}
+
+.stat-p {
+  font-size: clamp(16px, 3.5vw, 25px);
+  font-weight: 400;
+  font-family: "Montserrat";
+  width: 90%;
+  margin: 20px auto;
+}
+
+.stat-card .row {
+  display: flex;
+}
+
+.stat-card .row .col {
+  margin: 0 auto;
+}
+
+.stat-card {
+  text-align: center;
+  padding: 20px 0;
+}
+.stat-card-cont {
+  border: 5px solid #ff6f5e;
+  border-radius: 50%;
+  padding: 100px;
+}
+.stat-card-cont .stat-card-cont-h5 {
+  color: #ff6f5e;
+  text-align: center;
+  font-size: 75px;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
