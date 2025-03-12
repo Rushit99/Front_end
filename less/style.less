@@ -1,0 +1,17 @@
+@background-color : rgb(0, 202, 165);
+@color : rgb(1, 95, 6);
+
+// nesting
+.navbar{
+    list-style: none;
+    li{
+        display: inline-block;
+        background-color: @background-color;
+        padding: 10px 20px;
+        a{
+            text-decoration: none;
+            color: @color;
+        }
+    
+    }
+}

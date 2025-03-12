@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BookMyShow</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light ">
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/Bootstrap/Book my show/images/logo.png" width="140px" alt="Logo">
+            </a>
+            <div class="d-flex flex-grow-1 mx-3">
+                <input type="text" class="form-control" data-bs-toggle="modal" data-bs-target="#fullScreenModal"
+                    placeholder="Search for Movies, Events, Plays, Sports and Activities">
+            </div>
+            <div class="dropdown me-3">
+                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Ahmedabad
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mumbai</a></li>
+                    <li><a class="dropdown-item" href="#">Delhi</a></li>
+                    <li><a class="dropdown-item" href="#">Bangalore</a></li>
+                </ul>
+            </div>
+            <button class="btn btn-signin me-3 btn-danger">Sign in</button>
+            <button class="navbar-toggler d-block" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#rightSidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!--================= modal ================= -->
+    <div class="modal fade" id="fullScreenModal" tabindex="-1" aria-labelledby="fullScr 
+    feenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header container">
+                    <div class="mb-2 border-bottom-0">
+                        <!-- 🔍 Search Bar -->
+                        <input type="text" id="searchInput" class="form-control form-control-lg"
+                            placeholder="Search for Movies, Events, Plays, Sports and Activities">
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body container">
+                    <div class="filter d-flex justify-content-between align-items-center">
+                        <ul class="nav nav-tabs border-bottom-0" id="modalTabs" role="tablist">
+                            <li class="nav-item bg-secondary bg-opacity-10">
+                                <a class="nav-link active text-dark border rounded-0" id="movies-tab"
+                                    data-bs-toggle="tab" href="#movies">MOVIES</a>
+                            </li>
+                            <li class="nav-item bg-secondary bg-opacity-10">
+                                <a class="nav-link text-dark border rounded-0" id="cinemas-tab" data-bs-toggle="tab"
+                                    href="#cinemas">CINEMAS</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex align-items-center mt-3">
+                            <span class="fw-bold me-2">Filter</span>
+                            <button class="btn btn-outline-secondary btn-sm mx-1 filter-btn">HINDI</button>
+                            <button class="btn btn-outline-secondary btn-sm mx-1 filter-btn">GUJARATI</button>
+                            <button class="btn btn-outline-secondary btn-sm mx-1 filter-btn">TAMIL</button>
+                            <button class="btn btn-outline-secondary btn-sm mx-1 filter-btn">ENGLISH</button>
+                            <button class="btn btn-outline-secondary btn-sm mx-1 filter-btn">MALAYALAM</button>
+                            <button class="btn btn-outline-secondary btn-sm mx-1 filter-btn">JAPANESE</button>
+                            <button class="btn btn-outline-danger btn-sm mx-1">+ 1 MORE</button>
+                        </div>
+                    </div>
+                    <div class="tab-content mt-4" id="myTabContent">
+                        <!-- Movies Tab Content -->
+                        <div class="tab-pane fade show active" id="movies" role="tabpanel">
+                            <div class="row">
+                                <!-- Hindi Section -->
+                                <div class="col-md-3">
+                                    <h6 class="text-danger">HINDI</h6>
+                                    <p>Aghathiyaa (Hindi) (UA13) <span class="text-warning">NEW</span> ❤️ 65%</p>
+                                    <p>Captain America: Brave New World (Hindi) (UA16) ❤️ 69%</p>
+                                    <p>Chhaava ❤️ 93%</p>
+                                    <div class="d-inline-block">
+                                        <button class="btn btn-outline-secondary btn-sm">2D</button>
+                                        <button class="btn btn-outline-secondary btn-sm">IMAX 2D</button>
+                                        <button class="btn btn-outline-secondary btn-sm">4DX</button>
+                                    </div>
+                                    <p>Chhaava ❤️ 93%</p>
+                                    <p>Chhaava ❤️ 93%</p>
+                                    <p>Chhaava ❤️ 93%</p>
+                                    <p>Chhaava ❤️ 93%</p>
+                                    <p>Chhaava ❤️ 93%</p>
+                                </div>
+                                <!-- Gujarati Section -->
+                                <div class="col-md-3">
+                                    <p>Bhoolaa: The Power Of Man (UA13)</p>
+                                    <p>Bhoolaa: The Power Of Man (UA13)</p>
+                                    <p>Faati Ne? (UA16) ❤️ 92%</p>
+                                    <p>Faati Ne? (UA16) ❤️ 92%</p>
+                                    <p>Kaashi Raaghav (UA16) ❤️ 80%</p>
+                                    <h6 class="text-danger">GUJARATI</h6>
+                                    <p>Bhoolaa: The Power Of Man (UA13)</p>
+                                    <p>Faati Ne? (UA16) ❤️ 92%</p>
+                                    <p>Kaashi Raaghav (UA16) ❤️ 80%</p>
+                                    <p>The Doctor on Duty (UA16) <span class="text-warning">NEW</span> ❤️ 100%</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="text-danger ">ENGLISH</h6>
+                                    <p>Aghathiyaa (Hindi) (UA13) <span class="text-warning">NEW</span> ❤️ 65%</p>
+                                    <p>Captain America: Brave New World (Hindi) (UA16) ❤️ 69%</p>
+                                    <p>Chhaava ❤️ 93%</p>
+                                    <div class="d-inline-block">
+                                        <button class="btn btn-outline-secondary btn-sm">2D</button>
+                                        <button class="btn btn-outline-secondary btn-sm">IMAX 2D</button>
+                                        <button class="btn btn-outline-secondary btn-sm">4DX</button>
+                                    </div>
+                                </div>
+                                <!-- Tamil Section -->
+                                <div class="col-md-3">
+                                    <h6 class="text-danger">TAMIL</h6>
+                                    <p>Aghathiyaa (UA13) <span class="text-warning">NEW</span> ❤️ 65%</p>
+                                    <p>Dragon (UA16) ❤️ 93%</p>
+                                    <h6 class="text-danger">MALAYALAM</h6>
+                                    <p>Dragon (UA16) ❤️ 93%</p>
+                                    <h6 class="text-danger">JAPANESE</h6>
+                                    <p>Aghathiyaa (UA13) <span class="text-warning">NEW</span> ❤️ 65%</p>
+                                    <p>Dragon (UA16) ❤️ 93%</p>
+                                    <h6 class="text-danger">SPANISH</h6>
+                                    <p>Aghathiyaa (UA13) <span class="text-warning">NEW</span> ❤️ 65%</p>
+                                    <p>Dragon (UA16) ❤️ 93%</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cinemas" role="tabpanel">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <ul>
+                                        <li>PVR: Palladium Mall, Ahmedabad</li>
+                                        <li>PVR: Acropolis, Ahmedabad</li>
+                                        <li>Cinepolis: Nexus Ahmedabad One</li>
+                                        <li>City Gold: Ashram Road</li>
+                                        <li>PVR: Arved Transcube, Ahmedabad</li>
+                                        <li>Rajhans Cinemas: Vastral</li>
+                                        <li>INOX: Himalaya Mall, Drive In Road, Ahmedabad</li>
+                                        <li>Rajhans Cinemas: Nikol</li>
+                                        <li>PVR: Motera, Ahmedabad</li>
+                                        <li>Connplex Cinemas: Prahladnagar</li>
+                                        <li>SB Multiplex: Agora Mall</li>
+                                        <li>Connplex Cinemas (Signature): Gandhinagar</li>
+                                        <li>Apple Multiplex: Maninagar, Ahmedabad</li>
+                                        <li>Connplex Cinemas: Parimal</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <ul>
+                                        <li>SK Cinemas: Hathijan</li>
+                                        <li>City Gold: Vastral, Ahmedabad</li>
+                                        <li>Havelock Cineflix Cinemas: Maninagar, Ahmedabad</li>
+                                        <li>P Square Movieplex, Gota: Ahmedabad</li>
+                                        <li>Revolution Multiplex, CTM: Ahmedabad</li>
+                                        <li>Rupam Multiplex: Ahmedabad</li>
+                                        <li>INOX: Himalaya Mall, Drive In Road, Ahmedabad</li>
+                                        <li>Rajhans Cinemas: Nikol</li>
+                                        <li>PVR: Motera, Ahmedabad</li>
+                                        <li>Connplex Cinemas: Prahladnagar</li>
+                                        <li>SB Multiplex: Agora Mall</li>
+                                        <li>Connplex Cinemas (Signature): Gandhinagar</li>
+                                        <li>Apple Multiplex: Maninagar, Ahmedabad</li>
+                                        <li>Connplex Cinemas: Parimal</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <ul>
+                                        <li>Classic Cinema, Kudasan: Gandhinagar</li>
+                                        <li>Orange Cinemas: Bapunagar</li>
+                                        <li>White Screen Cinema (Five 11): Gandhinagar</li>
+                                        <li>Connplex Cinemas (Signature): Gota</li>
+                                        <li>Miraj Cinemas: Vardhman Square, Sanand, Ahmedabad</li>
+                                        <li>PVR: Motera, Ahmedabad</li>
+                                        <li>City Pulse: Orient Miniplex, Ellisbridge</li>
+                                        <li>Rupam Arth Cineplex: Sanand</li>
+                                        <li>Miraj Cinemas Cine Pride: Krishna Nagar</li>
+                                        <li>Apple Cinema: Bapunagar</li>
+                                        <li>Devi Multiplex: Naroda</li>
+                                        <li>Rajhans Cinemas: Nikol</li>
+                                        <li>SK Cinemas: Hathijan</li>
+                                        <li>Connplex Cinemas: Parimal</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <ul>
+                                        <li>Orange Cinemas: Bapunagar</li>
+                                        <li>Rajhans Cinemas: Nikol</li>
+                                        <li>Connplex Cinemas (Signature): Gandhinagar</li>
+                                        <li>PVR: Motera, Ahmedabad</li>
+                                        <li>PVR: Motera, Ahmedabad</li>
+                                        <li>Rupam Arth Cineplex: Sanand</li>
+                                        <li>Apple Cinema: Bapunagar</li>
+                                        <li>SB Multiplex: Agora Mall</li>
+                                        <li>Devi Multiplex: Naroda</li>
+                                        <li>SK Cinemas: Hathijan</li>
+                                        <li>Apple Multiplex: Maninagar, Ahmedabad</li>
+                                        <li>Rajhans Cinemas: Nikol</li>
+                                        <li>Connplex Cinemas: Parimal</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--============ Offcanvas Sidebar ============-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="rightSidebar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title fw-bold">Hey!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body p-0">
+            <!--============ Special Offer Section ============-->
+            <div class="d-flex align-items-center justify-content-between p-3 bg-light">
+                <div class="d-flex align-items-center">
+                    <img src="/Bootstrap/Book my show/images/reward.png" width="40px" class="me-2 rounded-circle">
+                    <span class="text-primary text-opacity-75 fs-6">Unlock special offers & great benefits</span>
+                </div>
+                <button class="btn btn-outline-danger btn-sm ">Login / Register</button>
+            </div>
+
+            <!--============ Menu List ================-->
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class="bi bi-bell me-2"></i> Notifications</li>
+
+                <li class="list-group-item text-secondary">
+                    <i class="bi bi-box me-2"></i> Your Orders
+                    <i class="bi bi-lock-fill float-end"></i>
+                    <div class="small">View all your bookings & purchases</div>
+                </li>
+
+                <li class="list-group-item text-secondary">
+                    <i class="bi bi-film me-2"></i> Stream Library
+                    <i class="bi bi-lock-fill float-end"></i>
+                    <div class="small">Rented & Purchased Movies</div>
+                </li>
+
+                <li class="list-group-item"><i class="bi bi-credit-card me-2"></i> Play Credit Card
+                    <div class="small">View your Play Credit Card details and offers</div>
+                </li>
+
+                <li class="list-group-item"><i class="bi bi-question-circle me-2"></i> Help & Support
+                    <div class="small">View commonly asked queries and Chat</div>
+                </li>
+
+                <li class="list-group-item text-secondary">
+                    <i class="bi bi-gear me-2"></i> Accounts & Settings
+                    <i class="bi bi-lock-fill float-end"></i>
+                    <div class="small">Location, Payments, Permissions & More</div>
+                </li>
+
+                <li class="list-group-item"><i class="bi bi-gift me-2"></i> Rewards
+                    <div class="small">View your rewards & unlock new ones</div>
+                </li>
+
+                <li class="list-group-item"><i class="bi bi-arrow-repeat me-2"></i> BookAChange</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ========second nav ======== -->
+    <div class="bg-light">
+        <div class="container">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Movies</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Stream</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Events</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Plays</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Sports</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Activities</a></li>
+                <li class="nav-item ms-auto"><a class="nav-link text-dark" href="#">ListYourShow</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Corporates</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Offers</a></li>
+                <li class="nav-item"><a class="nav-link text-dark" href="#">Gift Cards</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ===========  Carousel =================-->
+
+    <div class="py-2 bg-dark bg-opacity-10">
+        <div id="carouselExample" class="carousel slide justify-content-center" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner px-3">
+
+                <div class="carousel-item active">
+                    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1741088209116_4thmarholipartydesktopcarousel.jpg"
+                        class="d-block w-100 rounded" alt="Slide 1">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1740647667059_sevenandnottinghillwebbanner.jpg"
+                        class="d-block w-100 rounded" alt="Slide 2">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://assets-in.bmscdn.com/promotions/cms/creatives/1726036566435_playcardnewweb.jpg"
+                        class="d-block w-100 rounded" alt="Slide 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+
+    <div class="container mt-4">
+        <h4>Recommended Movies</h4>
+        <div id="movieCarousel" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4zLzEwICAyNTMuM0sgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00408691-wqmumfxjtk-portrait.jpg"
+                                class="d-block w-100" alt="Chhaava">
+                            <h5>Chhaava</h5>
+                            <p>Action/Drama/Historical</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4xLzEwICA1SyBWb3Rlcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00420660-yemjtgvzze-portrait.jpg"
+                                class="d-block w-100" alt="Umbarro">
+                            <h5>Umbarro</h5>
+                            <p>Comedy/Drama/Family</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-Ni45LzEwICAzLjJLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00430518-pbbpufjmrb-portrait.jpg"
+                                class="d-block w-100" alt="Mere Husband Ki Biwi">
+                            <h5>Mere Husband Ki Biwi</h5>
+                            <p>Comedy/Romantic</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC8xMCAgNEsgVm90ZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00432204-euccgryvlj-portrait.jpg"
+                                class="d-block w-100" alt="Crazyx">
+                            <h5>Crazxy</h5>
+                            <p>Drama/Thriller</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OS4yLzEwICAxLjZLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00428340-qubtwcwbeb-portrait.jpg"
+                                class="d-block w-100" alt="Faati Ne?">
+                            <h5>Faati Ne?</h5>
+                            <p>Comedy/Horror</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MzguMksgTGlrZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00412372-bszwfqkltb-portrait.jpg"
+                                class="d-block w-100" alt="Chhaava">
+                            <h5>Chhaava</h5>
+                            <p>Action/Drama/Historical</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MTAuMUsgTGlrZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00433941-tyxpbrgzda-portrait.jpg"
+                                class="d-block w-100" alt="Umbarro">
+                            <h5>Umbarro</h5>
+                            <p>Comedy/Drama/Family</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-MTYgTGlrZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00436667-zbpzcafblz-portrait.jpg"
+                                class="d-block w-100" alt="Mere Husband Ki Biwi">
+                            <h5>Mere Husband Ki Biwi</h5>
+                            <p>Comedy/Romantic</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@like_202006280402.png,lx-24,ly-617,w-29,l-end:l-text,ie-N0sgTGlrZXM%3D,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00430332-cqbbxvcjzs-portrait.jpg"
+                                class="d-block w-100" alt="Crazxy">
+                            <h5>Crazxy</h5>
+                            <p>Drama/Thriller</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-image,i-discovery-catalog@@icons@@star-icon-202203010609.png,lx-24,ly-615,w-29,l-end:l-text,ie-OC42LzEwICAxLjZLIFZvdGVz,fs-29,co-FFFFFF,ly-612,lx-70,pa-8_0_0_0,l-end/et00410899-kahkzbdeqb-portrait.jpg"
+                                class="d-block w-100" alt="Faati Ne?">
+                            <h5>Faati Ne?</h5>
+                            <p>Comedy/Horror</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon mb-5" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#movieCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon mb-5 " aria-hidden="true"></span>
+            </button>
+
+            <div class="my-5">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:,/stream-leadin-web-collection-202210241242.png"
+                    class=" w-100" alt="New Movie">
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 py-2">
+        <h4>The Best Of Live Events</h4>
+        <div id="eventCarousel" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Workshops">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NSBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-kids-collection-202404190106.png"
+                                class="d-block w-100 rounded" alt="Kids">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NDUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Comedy">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Music">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NCBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/upskill-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Upskill">
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NDUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Comedy">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Music">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NCBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/upskill-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Upskill">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/arts-crafts-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Sports">
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/theatre-shows-collection-202211140440.png"
+                                class="d-block w-100 rounded" alt="Theatre">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="d-flex align-items-center mb-5">
+                <div class=" ">
+                    <i class="bi bi-play-fill text-white bg-danger rounded-circle d-flex justify-content-center align-items-center fs-1"
+                        style="width: 50px; height: 50px;"></i>
+                </div>
+                <div>
+                    <span class="fs-4 fw-bold ms-3 text-opacity-75">PREMIERE</span>
+                    <p class="ms-3 mb-0 text-opacity-75">Watch new movies at home, every Friday</p>
+                </div>
+            </div>
+            <h3>Premieres</h3>
+            <p>Brand new releases every Friday</p>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00421058-dckzpwmcaz-portrait.jpg"
+                        class="d-block w-75 rounded" alt="Grafted">
+                    <div class="mt-2">
+
+                        <h5>Grafted</h5>
+                        <p>English</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00132276-erkkmefxav-portrait.jpg"
+                        class="d-block w-75 rounded" alt="Barah X Barah">
+                    <div class="mt-2">
+
+                        <h5>Barah X Barah</h5>
+                        <p>Hindi</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00435561-atvelkzvjv-portrait.jpg"
+                        class="d-block w-75 rounded" alt="Dominique">
+                    <div class="mt-2">
+                        <h5>Dominique</h5>
+                        <p>English, Hindi, Tamil, Telugu</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00401017-bhuexjawxg-portrait.jpg"
+                        class="d-block w-75 rounded" alt="Tara - The Lost Star">
+                    <div class="mt-2">
+                        <h5>Tara - The Lost Star</h5>
+                        <p>Nepali</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h4>Top Games & Sport Events</h4>
+        <div id="cricketcarousel" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCA2IE1heQ%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434290-tsdetzkbam-portrait.jpg"
+                                class="d-block w-100" alt="Chhaava">
+                            <h5>Mumbai Indians vs Gujarat Titans</h5>
+                            <p>Wankhede Stadium: Mumbai</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAzMCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434151-lrhyslywqp-portrait.jpg"
+                                class="d-block w-100" alt="Umbarro">
+                            <h5>Rajasthan Royals vs Chennai Super Kings</h5>
+                            <p>Barsapara Cricket Stadium: Guwahati</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VHVlLCAxIEFwcg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434748-wfebffswhq-portrait.jpg"
+                                class="d-block w-100" alt="Mere Husband Ki Biwi">
+                            <h5>Lucknow Super Giants vs Punjab Kings</h5>
+                            <p>BRSABV Ekana Cricket Stadium: Lucknow</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAzMSBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434285-fvpgcjmvhb-portrait.jpg"
+                                class="d-block w-100" alt="Crazyx">
+                            <h5>Mumbai Indians vs Kolkata Knight Riders</h5>
+                            <p>Wankhede Stadium: Mumbai</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAxNyBBcHI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434287-txfmnfnqqs-portrait.jpg"
+                                class="d-block w-100" alt="Faati Ne?">
+                            <h5>Mumbai Indians vs Sunrisers Hyderabad</h5>
+                            <p>Wankhede Stadium: Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAyNiBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434150-fuszwjfpzv-portrait.jpg"
+                                class="d-block w-100" alt="Chhaava">
+                            <h5>Rajasthan Royals vs Kolkata Knight Riders</h5>
+                            <p>Barsapara Cricket Stadium: Guwahati</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA5IE1hciBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00312923-njqndhzxwq-portrait.jpg"
+                                class="d-block w-100" alt="Umbarro">
+                            <h5>Spartan Fitness Marathon </h5>
+                            <p>Your Place and Time: India</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMyBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00435848-cbnakmmldu-portrait.jpg"
+                                class="d-block w-100" alt="Mere Husband Ki Biwi">
+                            <h5>Chess Championship (Online) For All Age</h5>
+                            <p>Your Place and Time: India</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-VGh1LCAxNSBNYXk%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434291-zewyebrhen-portrait.jpg"
+                                class="d-block w-100" alt="Crazxy">
+                            <h5>Kolkata Knight Riders vs Sunrisers Hyderabad</h5>
+                            <p>Eden Gardens: Kolkata</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAzMCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00426930-wvtutlqbxx-portrait.jpg"
+                                class="d-block w-100" alt="Faati Ne?">
+                            <h5>Mumbai Indians vs Delhi Capitals</h5>
+                            <p>Wankhede Stadium: Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#cricketcarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cricketcarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <h4>Explore Fun Activities</h4>
+        <div id="holiCarousel" class="carousel slide" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00433211-evdbtqsdmu-portrait.jpg"
+                                class="d-block w-100" alt="Chhaava">
+                            <h5>Ranga Rang 2.0</h5>
+                            <p>Jay Ambe Cricket Ground, Ahmedabad</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00431119-kybtddzxmn-portrait.jpg"
+                                class="d-block w-100" alt="Umbarro">
+                            <h5>Holi Pool Party</h5>
+                            <p>Arristo Resorts and Club, Ahmedabad</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00430039-nfjlvppqzu-portrait.jpg"
+                                class="d-block w-100" alt="Mere Husband Ki Biwi">
+                            <h5>Probuzz Holi Festival Season-3</h5>
+                            <p>Anmol Farm and Party Plot, Ahmedabad</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00430511-zkhxdpcmqv-portrait.jpg"
+                                class="d-block w-100" alt="Crazyx">
+                            <h5>Rang Holi 3.0</h5>
+                            <p>YMCA International Centre, Ahmedabad</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA5IE1hciBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00308166-zedwknkkxc-portrait.jpg"
+                                class="d-block w-100" alt="Faati Ne?">
+                            <h5>Shankus Waterpark & Resort</h5>
+                            <p>Shankus Water Park, Mehsana</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00431894-ggqgdpvmya-portrait.jpg"
+                                class="d-block w-100" alt="Chhaava">
+                            <h5>RANG BARSE</h5>
+                            <p>Aagman Party Plot, Ahmedabad</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434245-amfzqwvxdg-portrait.jpg"
+                                class="d-block w-100" alt="Umbarro">
+                            <h5>Mirchi Ahmedabad Holi Spring Fest 2025</h5>
+                            <p>Zodiac The One Event Destination, Khoraj</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00435235-wfpqfjazaw-portrait.jpg"
+                                class="d-block w-100" alt="Mere Husband Ki Biwi">
+                            <h5>Sunburn HOLI - Ahmedabad</h5>
+                            <p>At Good Place, Ahmedabad</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00379698-hwbsjaaryb-portrait.jpg"
+                                class="d-block w-100" alt="Crazxy">
+                            <h5>Jashn E Rang</h5>
+                            <p>Mahendra Farm, Ahmedabad</p>
+                        </div>
+                        <div class="col">
+                            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAxNCBNYXI%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00434042-qvzqtuwhzu-portrait.jpg"
+                                class="d-block w-100" alt="Faati Ne?">
+                            <h5>HOLI CARNIVAL</h5>
+                            <p>Astitva Ground - Shilaj, Ahmedabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#holiCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#holiCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h4 class="fw-bold">Trending Searches Right Now</h4>
+        <div class="row g-2 mt-3">
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">Mumbai Indians vs Gujarat
+                        Titans</strong><br><small>Sports</small> </div>
+            </div>
+            <div class="col-md-2 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong
+                        class="text-danger">Chhaava</strong><br><small>Movies</small>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">YO YO HONEY SINGH
+                        NIGHT</strong><br><small>Events</small> </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">Mumbai Indians - IPL
+                        2025</strong><br><small>Sports</small> </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">ICC Mens Champions Trophy
+                        2025
+                        Finals (IND Vs NZ)</strong><br><small>Movies</small> </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">Mumbai Indians vs Gujarat
+                        Giants</strong><br><small>Sports</small> </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">Pool Wali Holi - Radhe Ki
+                        Holi</strong><br><small>Events</small> </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong
+                        class="text-danger">Umbbaro</strong><br><small>Movies</small> </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">GIFA -2024 (GUJARATI
+                        ICONIC FILM
+                        AWARDS)</strong><br><small>Events</small> </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="p-3 border rounded bg-white"> <strong class="text-danger">Sanam Teri
+                        Kasam</strong><br><small>Movies</small> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-white py-4">
+        <div class="px-3">
+            <div class="row align-items-center">
+                <div class="col-md-10 d-flex align-items-center">
+                    <img src="https://in.bmscdn.com/webin/common/icons/hut.svg" class="me-3" alt="">
+                    <h6 class="fw-bold mb-0 me-2">List your Show</h6>
+                    <p class="mb-0">Got a show, event, activity or a great experience? Partner with us & get listed on
+                        BookMyShow</p>
+                </div>
+                <div class="col-md-2 text-end">
+                    <button class="btn btn-danger">Contact today!</button>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row text-center text-secondary">
+                <div class="col-md-4 mb-3">
+                    <i class="bi bi-headset fs-2"></i>
+                    <h6 class="fw-bold">24/7 CUSTOMER CARE</h6>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="bi bi-ticket-perforated fs-2"></i>
+                    <h6 class="fw-bold">RESEND BOOKING CONFIRMATION</h6>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <i class="bi bi-envelope fs-2"></i>
+                    <h6 class="fw-bold">SUBSCRIBE TO THE NEWSLETTER</h6>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="row gy-3 text-secondary">
+                <div class="col-md-12">
+                    <h6 class="fw-bold">MOVIES NOW SHOWING IN AHMEDABAD</h6>
+                    <p>Chhaava | Umbbaro | Faati Ne? | Crazy | Mere Husband Ki Biwi | Shaadi Mein Zaroor Aana | Sanam
+                        Teri
+                        Kasam | Mickey 17 | Legally Veer | Lootera</p>
+                </div>
+                <div class="col-md-12">
+                    <h6 class="fw-bold">UPCOMING MOVIES IN AHMEDABAD</h6>
+                    <p>Ghamaghot | The Waiting List: An Antidote | Kuttram Kurai | Simli | Lamp | Alakshye Ritwik | 1000
+                        Waala | Dilruba | Rishtey | Novocaine</p>
+                </div>
+                <div class="col-md-12">
+                    <h6 class="fw-bold">MOVIES BY GENRE</h6>
+                    <p>Drama Movies | Thriller Movies | Comedy Movies | Romantic Movies | Adventure Movies | Action
+                        Movies |
+                        Crime Movies | Fantasy Movies | Family Movies | Musical Movies</p>
+                </div>
+                <div class="col-md-12">
+                    <h6 class="fw-bold">MOVIES BY LANGUAGE</h6>
+                    <p>Movies in Hindi | Movies in English | Movies in Gujarati | Movies in Tamil | Movies in Sindhi |
+                        Movies in Khasi | Movies in Tulu | Movies in Portuguese | Movies in Punjabi | Movies in
+                        Rajasthani
+                    </p>
+                </div>
+                <div class="col-md-12">
+                    <h6 class="fw-bold">SPORTS EVENTS IN AHMEDABAD</h6>
+                    <p>Cricket | Running | Chess | Badminton | Boxing | Card Games | Athletics | Mixed Martial Arts |
+                        Horse
+                        Race | Sailing</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+
+
+
+</html>
